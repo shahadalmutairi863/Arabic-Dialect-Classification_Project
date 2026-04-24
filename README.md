@@ -1,105 +1,146 @@
-# Arabic Dialect Classification
+# Arabic Dialect Classification (Senior Project)
 
-This project focuses on **Arabic dialect identification** using Natural Language Processing (NLP) techniques on the **SADA dataset**.  
-It compares classical machine learning and transformer-based approaches for classifying Arabic dialects from text.
+A **final-year group project** specializing in **Arabic Natural Language Processing (NLP)**.  
+The project focuses on classifying **Arabic dialects** using a combination of **classical machine learning** and **transformer-based deep learning models**.  
 
-## Overview
+> 📘 *Developed as a team project for the Diploma in Data Science at the University of Jeddah (2025–2026).*
 
-Arabic dialect classification is a challenging task because Arabic varies significantly across regions such as Najdi, Hijazi, Khaliji, Egyptian, Levantine, and others.  
-In this project, we trained and evaluated three different models:
+---
 
-- **Logistic Regression** with TF-IDF
-- **AraBERT**
-- **MARBERT**
+## 👥 Team Members
+| Name | Student ID |
+|------|-------------|
+| **Shahad Almutairi** | 2316095 |
+| **Ruba Alfageeh** | 2315366 |
+| **Tala Melaih** | 2317013 |
+| **Safaa Alsufyani** | 2315828 |
 
-The goal was to determine which model performs best on Arabic dialect classification and to analyze the effect of preprocessing and class imbalance on performance.
+**Supervisor:** Dr. Roshayu Mohammed  
+**Program:** Applied College – Diploma in Data Science  
 
-## Dataset
+---
 
-The project uses the **SADA 2022 dataset**, which contains Arabic text samples labeled by dialect.
+## 🎯 Project Overview
+Arabic dialects differ widely between regions (Najdi, Hijazi, Khaliji, Egyptian, Levantine, etc.), which makes automatic understanding difficult for NLP systems.  
+This project investigates and compares different modeling techniques to automatically detect the dialect used in Arabic text.
 
-Selected columns:
-- `GroundTruthText` → input text
-- `SpeakerDialect` → target label
+### Objectives
+- Build an NLP system that recognizes Arabic dialects.
+- Compare **Logistic Regression**, **AraBERT**, and **MARBERT** models.
+- Analyze the impact of preprocessing and class imbalance on model performance.
+- Contribute to Arabic NLP research through a clear performance comparison.
 
-## Preprocessing
+---
 
-A custom preprocessing pipeline was applied to Arabic text, including:
+## 🧠 Models Used
+| Model | Description |
+|--------|--------------|
+| **Logistic Regression (TF‑IDF)** | Baseline classical model |
+| **AraBERT** | Transformer model trained on Modern Standard Arabic and news data |
+| **MARBERT** | Transformer trained on dialectal Arabic tweets and social text |
 
-- Text normalization
-- Diacritics removal
-- Noise and punctuation removal
-- Removal of English characters and symbols
-- Tokenization
-- Stop word removal
-- Repeated character handling
+---
 
-## Models
+## 📊 Dataset
+**SADA 2022 Dataset** (Saudi Data and AI Authority).  
+Used the following features:
+- `GroundTruthText` → Arabic text input  
+- `SpeakerDialect` → dialect label  
 
-### 1. Logistic Regression
-A baseline machine learning model trained using **TF-IDF** features.
+---
 
-### 2. AraBERT
-A transformer-based Arabic language model fine-tuned for dialect classification.
+## 🧹 Preprocessing Pipeline
+- Text normalization and diacritics removal  
+- Noise removal (emojis, punctuation, English characters)  
+- Stop‑word removal  
+- Tokenization  
+- Character repetition handling  
 
-### 3. MARBERT
-A transformer model designed for dialectal Arabic and social media text.
+---
 
-## Results
+## ⚙️ Tools & Technologies
+Python | Google Colab | Scikit‑learn | PyTorch | Hugging Face Transformers | Pandas | NLTK | Matplotlib | Seaborn  
 
-| Model | Accuracy | Macro F1 | Macro Recall |
-|------|----------|----------|--------------|
-| AraBERT | 55.7% | 0.249 | 0.238 |
-| MARBERT | 56.7% | 0.258 | 0.246 |
-| Logistic Regression (weighted) | 43.0% | 0.20 | 0.33 |
+---
 
-## Tools and Technologies
+## 📈 Results
 
-- Python
-- Google Colab
-- Scikit-learn
-- Hugging Face Transformers
-- PyTorch
-- Pandas
-- NLTK
-- Matplotlib
-- Seaborn
+| Model | Accuracy | Macro F1 | Macro Recall |
+|--------|-----------|-----------|---------------|
+| **AraBERT** | 55.7 % | 0.249 | 0.238 |
+| **MARBERT** | **56.7 %** | **0.258** | **0.246** |
+| Logistic Regression (weighted) | 43 % | 0.20 | 0.33 |
 
-## Project Structure
+---
 
+## 🔍 Key Findings
+- **MARBERT** achieved the best overall performance.  
+- **AraBERT** performed strongly on formal Arabic.  
+- **Logistic Regression** proved valuable for balanced, interpretable baselines.  
+- **Class imbalance** was a major modeling challenge.
+
+---
+
+## 🧩 My Contribution – Shahad Almutairi
+
+Within the group project, my main role focused on **data processing, analysis, and baseline model development**.  
+I contributed to both the technical implementation and the analytical evaluation of model performance.
+
+### Responsibilities
+- **Data Preprocessing & Cleaning:**  
+  Designed and implemented the Arabic text preprocessing pipeline (diacritics and punctuation removal, normalization, stop‑word filtering, and tokenization) using Python & NLTK.
+
+- **Exploratory Data Analysis (EDA):**  
+  Performed data visualization using **Matplotlib** and **Seaborn** to analyze dialect distribution, detect imbalance, and highlight frequent linguistic patterns.
+
+- **Model Building:**  
+  Developed and fine‑tuned the **Logistic Regression baseline** with **TF‑IDF** features, applied class‑weight balancing, and evaluated model accuracy, precision, recall, and F1‑score.
+
+- **Documentation & Results Analysis:**  
+  Authored portions of the final report, including methodology and results sections, and created performance charts comparing AraBERT, MARBERT, and Logistic Regression.
+
+### Impact
+My contributions helped ensure clean, high‑quality text data and provided a strong quantitative baseline that guided deeper model experiments with AraBERT and MARBERT.
+
+---
+
+## 🚀 Future Work
+- Data augmentation for under‑represented dialects  
+- Audio‑text multimodal learning  
+- Hyperparameter tuning and cross‑validation  
+- Ensemble methods  
+- Explainability using SHAP or LIME  
+
+---
+
+## 📁 Repository Structure
 ```bash
 arabic-dialect-classification/
 ├── README.md
+├── requirements.txt
+├── .gitignore
 ├── notebooks/
+│   ├── preprocessing_and_AraBERT.ipynb
+│   ├── MARBERT.ipynb
+│   └── LogisticRegression.ipynb
 ├── reports/
-├── images/
-├── src/
-└── requirements.txt
+│   └── final_report.pdf
+└── images/
 ```
 
-## Key Findings
+---
 
-- **MARBERT** achieved the best overall performance.
-- **AraBERT** showed strong results, especially on more formal Arabic text.
-- **Logistic Regression** was a useful baseline and improved minority-class recall when class balancing was applied.
-- Class imbalance was one of the main challenges in this task.
+## 🏆 Acknowledgment
+Special thanks to **Dr. Roshayu Mohammed** for supervision and guidance throughout the project.
 
-## Future Work
+---
 
-- Data augmentation for low-resource dialects
-- Audio-text multimodal classification
-- Hyperparameter tuning
-- Cross-validation
-- Ensemble learning
-- Explainability using SHAP or LIME
+## 📎 Reference Links
+- [SADA Dataset (Kaggle)](https://www.kaggle.com/datasets/sdaiancai/sada2022/data)  
+- [AraBERT Paper – LREC 2020](https://arxiv.org/abs/2003.00104)  
+- [MARBERT Paper – NAACL 2021](https://arxiv.org/abs/2101.01785)
 
-## Authors
+---
 
-- Ruba Alfageeh
-- Shahad Almutairi
-- Tala Melaih
-- Safaa Alsufyani
+📍 *University of Jeddah – Applied College – Diploma in Data Science ( 2025 / 2026 )*
 
-## Supervisor
-
-Dr. Roshayu Mohammed
