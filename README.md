@@ -124,7 +124,7 @@ arabic-dialect-classification/
 ├── reports/
 │   └── final_report.pdf
 ```
-final_report (1).pdf
+[Final Report](./Final_Report.pdf)
 ---
 
 ## 🏆 Acknowledgment
