@@ -96,7 +96,7 @@ I played a key role in the project by focusing on data exploration, preprocessin
 
 - **Documentation & Team Coordination:**  
   Wrote parts of the final report, including the methodology and results sections. I also documented the preprocessing steps and coordinated task distribution among team members.
-Impact
+
 ### Impact
 My contributions helped introduce a new direction to the project by exploring audio datasets and their dedicated models—an area not covered in our coursework. Additionally, my EDA and preprocessing work provided a solid, clean foundation for all models and guided the deeper experiments with transformer‑based approaches.
 
