@@ -3,7 +3,7 @@
 A **final-year group project** specializing in **Arabic Natural Language Processing (NLP)**.  
 The project focuses on classifying **Arabic dialects** using a combination of **classical machine learning** and **transformer-based deep learning models**.  
 
-> 📘 *Developed as a team project for the Diploma in Data Science at the University of Jeddah (2025–2026).*
+> 📘 *Developed as a team project for the Diploma in Data Science at the University of Jeddah.*
 
 ---
 
