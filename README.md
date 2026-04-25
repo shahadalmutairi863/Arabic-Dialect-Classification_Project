@@ -139,5 +139,5 @@ Special thanks to **Dr. Roshayu Mohammed** for supervision and guidance th
 
 ---
 
-📍 *University of Jeddah – Applied College – Diploma in Data Science ( 2025 / 2026 )*
+📍 *University of Jeddah – Applied College – Diploma in Data Science.*
 
